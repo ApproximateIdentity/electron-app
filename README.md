@@ -20,3 +20,34 @@ but this is the one I'm using now. Next you can run the app as follows:
 ```
 $ electron electron-app/
 ```
+
+Packaging
+---------
+
+This basically just rehashes the instructions found here:
+
+    https://electron.atom.io/docs/tutorial/application-distribution/
+
+This app can be packaged for linux and Windows by following the following
+steps:
+
+1. Download the latest electron release from here (not the release that says
+"symbols" in it...I'm not sure what that's about):
+
+    ```
+    https://github.com/electron/electron/releases/
+    ```
+
+2. Unzip that file into a folder called (say) `release/`.
+
+3. Copy our simple app (i.e. the root reposistory folder which I call
+`electron-app`) to the `resources` folder as follows (note that the
+`release/resources/app` folder does not exist so the name of the folder
+`electron-app` becomes `app`):
+
+    ```
+    cp -r electron-app release/resources/app
+    ```
+
+4. Finally if you execute the `release/electron` file it automatically finds
+and starts your app.
