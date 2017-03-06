@@ -51,3 +51,22 @@ steps:
 
 4. Finally if you execute the `release/electron` file it automatically finds
 and starts your app.
+
+
+Packaging App Using `asar` Format
+---------------------------------
+
+First install asar as follows:
+
+```
+    $ npm install -g asar
+```
+
+Next go into the `release/resources/` folder and pack the app as follows:
+
+```
+    $ asar pack app/ app.asar
+    $ rm -r app/ # Remove old folder hierarchy
+```
+
+Next execute the electron application as before and it functions the same way.
