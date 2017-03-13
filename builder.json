@@ -1,0 +1,6 @@
+{
+  "linux": {
+    "description": "ElectronApp",
+    "target": "deb"
+  }
+}

@@ -1,5 +1,21 @@
 {
-    "name": "your-app",
-    "version":  "0.1.0",
-    "main": "main.js"
+  "name": "ElectronApp",
+  "version": "0.1.0",
+  "main": "main.js",
+  "author": {
+    "name": "Thomas Nyberg",
+    "email": "tomnyberg@gmail.com"
+  },
+  "maintainer": "Thomas Nyberg",
+  "scripts": {
+    "start": "electron .",
+    "clean": "rm -rf ./dist",
+    "pack": "npm run clean && electron-packager . \"ElectronApp\" --out=dist --platform=linux --arch=x64 --electronVersion=0.1.0 --ignore=dist --ignore=README.md --ignore=.gitignore --ignore=node_modules",
+    "build": "npm run pack && build \"dist/ElectronApp.deb\" --platform=linux --dir=\"dist\" --config=builder.json"
+  },
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-builder": "^15.2.0",
+    "electron-packager": "^8.5.2"
+  }
 }

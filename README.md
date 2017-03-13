@@ -70,3 +70,21 @@ Next go into the `release/resources/` folder and pack the app as follows:
 ```
 
 Next execute the electron application as before and it functions the same way.
+
+
+Building a Debian Package Using Electron Builder
+------------------------------------------------
+
+Make sure that the following packages are installed:
+
+```
+# Run inside the root of the repository
+$ npm install
+```
+
+After that package it with the following command to produce a debian package
+inside of `dist/`:
+
+```
+$ npm run build
+```
